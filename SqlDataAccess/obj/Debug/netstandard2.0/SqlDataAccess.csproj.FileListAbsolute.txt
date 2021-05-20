@@ -1,0 +1,9 @@
+C:\Users\HP\source\repos\LEARNING\BLAZOR\BlazorApp\SqlDataAccess\bin\Debug\netstandard2.0\SqlDataAccess.deps.json
+C:\Users\HP\source\repos\LEARNING\BLAZOR\BlazorApp\SqlDataAccess\bin\Debug\netstandard2.0\SqlDataAccess.dll
+C:\Users\HP\source\repos\LEARNING\BLAZOR\BlazorApp\SqlDataAccess\bin\Debug\netstandard2.0\SqlDataAccess.pdb
+C:\Users\HP\source\repos\LEARNING\BLAZOR\BlazorApp\SqlDataAccess\obj\Debug\netstandard2.0\SqlDataAccess.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\LEARNING\BLAZOR\BlazorApp\SqlDataAccess\obj\Debug\netstandard2.0\SqlDataAccess.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\LEARNING\BLAZOR\BlazorApp\SqlDataAccess\obj\Debug\netstandard2.0\SqlDataAccess.AssemblyInfo.cs
+C:\Users\HP\source\repos\LEARNING\BLAZOR\BlazorApp\SqlDataAccess\obj\Debug\netstandard2.0\SqlDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\LEARNING\BLAZOR\BlazorApp\SqlDataAccess\obj\Debug\netstandard2.0\SqlDataAccess.dll
+C:\Users\HP\source\repos\LEARNING\BLAZOR\BlazorApp\SqlDataAccess\obj\Debug\netstandard2.0\SqlDataAccess.pdb

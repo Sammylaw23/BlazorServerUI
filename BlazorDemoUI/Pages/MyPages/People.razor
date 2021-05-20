@@ -1,0 +1,90 @@
+﻿@page "/Data/People"
+
+@using DataAccessLibrary
+@using DataAccessLibrary.Models
+@using BlazorDemoUI.Models
+
+
+@inject IPeopleData _db
+
+<h1>People</h1>
+
+<h2>Add a person</h2>
+
+<EditForm Model="@newPerson" OnValidSubmit="@InsertPerson">
+    <DataAnnotationsValidator/>
+    <ValidationSummary></ValidationSummary>
+
+    <InputText id="firstName" @bind-Value="newPerson.FirstName"></InputText>
+    <InputText id="lastName" @bind-Value="newPerson.LastName"></InputText>
+    <InputText id="emailAddress" @bind-Value="newPerson.EmailAddress"></InputText>
+
+    <button type="submit" class="btn btn-primary" >Submit</button>
+</EditForm>
+
+
+<h3>Current People</h3>
+
+    @if(people is null)
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(var person in people)
+                {
+                    <tr>
+                        <td>
+                            @person.FirstName
+                        </td>
+                        <td>
+                            @person.LastName
+                        </td>
+                        <td>
+                            @person.EmailAddress
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+
+@code {
+
+    private List<PersonModel> people;
+    private DisplayPersonModel newPerson = new DisplayPersonModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        people = await _db.GetPeople();
+    }
+
+    public async Task InsertPerson()
+    {
+        PersonModel p = new PersonModel()
+        {
+            FirstName = newPerson.FirstName,
+            LastName = newPerson.LastName,
+            EmailAddress = newPerson.EmailAddress
+        };
+
+        await _db.InsertPerson(p);
+        people.Add(p);
+
+        newPerson = new DisplayPersonModel();
+
+
+    }
+
+}
